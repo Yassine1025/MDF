@@ -53,8 +53,8 @@ const Footer = () => {
           </p>
 
         <div className="footer-icons">
-          <a href="#"><img style={{ width: '20px', marginRight: '5px' }} src={instagram} alt="Instagram" /></a>
-          <a href="#"><img style={{ width: '20px', marginRight: '5px' }} src={whatsapp} alt="whatsapp" /></a>
+          <a href="https://www.instagram.com/fouad.mediouni/profilecard/?igsh=Z2M1OHlsYXVjMzIx "><img style={{ width: '20px', marginRight: '5px' }} src={instagram} alt="Instagram" /></a>
+          <a href="https://wa.me/qr/GLTQ2UMF5HGRL1"><img style={{ width: '20px', marginRight: '5px' }} src={whatsapp} alt="whatsapp" /></a>
 
         </div>
       </div>
