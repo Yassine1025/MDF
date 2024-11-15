@@ -1,0 +1,154 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Added for better layout management */
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif; /* Added for a better default font */
+  background-color: #f7f4f1; /* Light background to contrast wood colors */
+}
+
+/* Navigation bar */
+nav {
+  background-color: #8b5a2b; /* Dark wood color */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000; /* Ensures the nav stays above other content */
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+  position: relative; /* Added for dropdown positioning */
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px; 
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #fff; /* White text for contrast */
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust as needed */
+}
+
+/* Dropdown menu styles */
+ul.dropdown {
+  width: 200px; /* Adjust width as needed */
+  background: #6f4c3e; /* Medium wood color */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  display: none; /* Hidden by default */
+  list-style: none;
+  border-radius: 4px; /* Rounded corners for a modern look */
+  overflow: hidden; /* Hide overflow for rounded corners */
+}
+
+ul.dropdown li {
+  display: block;
+}
+
+ul.dropdown li a {
+  color: white;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+ul.dropdown li a:hover {
+  background-color: #5c3e34; /* Darker wood color for hover */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+nav li:hover ul.dropdown {
+  display: block; /* Show dropdown on hover */
+  transition: display 0.3s ease-in-out; /* Smooth dropdown display */
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(139, 90, 43, 0.9); /* Slightly transparent dark wood */
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%); /* Initially hide the sidebar */
+}
+
+.sidebar.visible {
+  display: flex; /* Show the sidebar */
+  transform: translateX(0); /* Slide in */
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light divider */
+}
+
+.sidebar a:hover {
+  background-color: #5c3e34; /* Darker wood color for hover */
+  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.menu-button {
+  display: none;
+  cursor: pointer; /* Added for better UX */
+}
+
+/* Responsive behavior */
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none; /* Hide on mobile */
+  }
+
+  .menu-button {
+    display: block; /* Show menu button on small screens */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%; /* Sidebar takes the full width on small screens */
+  }
+}
