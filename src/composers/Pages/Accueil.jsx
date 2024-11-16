@@ -32,8 +32,6 @@ export default function Accueil() {
         </div>
       </div>
 
-      {/* Modal */}
-
       <AllCategory/>
     </div>
   );
